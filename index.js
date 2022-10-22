@@ -22,6 +22,12 @@ app.get('/news-categories', (req, res) => {
     res.send(categories);
 })
 
+//all news category show home page
+app.get('/news', (req, res) => {
+    res.send(news);
+})
+
+
 // news category nibo tai filter use korbo
 app.get('/category/:id', (req, res) => {
     const id = req.params.id;
@@ -45,6 +51,7 @@ app.get('/news/:id', (req, res) => {
     res.send(slectedNews);
 
 });
+
 
 
 app.listen(port, () => {
